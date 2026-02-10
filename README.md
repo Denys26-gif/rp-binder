@@ -1,33 +1,114 @@
-# RP Binder Project
+# 🎮 RP Binder
 
-Welcome to the RP Binder project!
+**RP Binder** — це потужний додаток для управління RP біндами в GTA 5 та MTA з підтримкою Discord Rich Presence, профілів серверів та макросів.
 
-This project is designed to facilitate...
+## ✨ Особливості
 
-## Features
-- Feature 1
-- Feature 2
-- Feature 3
+- 🎯 **Управління Профілями** - Різні налаштування для кожного сервера
+- 🎮 **RP Біди** - Створюй та редагуй біди з підтримкою макросів
+- 🔗 **Discord Rich Presence** - Автоматична інтеграція (налаштування в додатку)
+- 🎨 **Красивий UI** - PyQt5 з Dark/Light темами
+- 💾 **Експорт/Імпорт** - Збереження конфігурацій у JSON
+- 🌍 **Мультимовність** - Українська та англійська
 
-## Installation
-To install, use the following command:
+## 🚀 Встановлення
+
+### Вимоги
+- Python 3.9+
+- pip
+
+### Кроки
 
 ```bash
-pip install rpbinder
+# Клонуємо репозиторій
+git clone https://github.com/Denys26-gif/rp-binder.git
+cd rp-binder
+
+# Встановлюємо залежності
+pip install -r requirements.txt
+
+# Запускаємо додаток
+python main.py
 ```
 
-## Usage
-Here's how to use the RP Binder:
+## 📋 Структура Проекту
 
-```python
-import rpbinder
+```
+rp-binder/
+├── main.py                 # Точка входу
+├── requirements.txt        # Залежності
+├── config.json            # Основна конфігурація
+├── src/
+│   ├── __init__.py
+│   ├── ui/
+│   │   ├── __init__.py
+│   │   ├── main_window.py
+│   │   ├── dialogs.py
+│   │   ├── styles.py
+│   │   └── resources.qrc
+│   ├── core/
+│   │   ├── __init__.py
+│   │   ├── binder.py
+│   │   ├── profile.py
+│   │   ├── discord_rpc.py
+│   │   └── macro_handler.py
+│   └── utils/
+│       ├── __init__.py
+│       ├── config.py
+│       ├── constants.py
+│       └── logger.py
+├── profiles/              # Папка з профілями користувача
+├── assets/               # Іконки, шрифти, тощо
+└── README.md
 ```
 
-## Contributing
-We welcome contributions! Please check out our [contributing guidelines](CONTRIBUTING.md).
+## 🎯 Як Використовувати
 
-## License
-This project is licensed under the MIT License. See the LICENSE file for details.
+### 1. Створення Профілю
+1. Запусти додаток
+2. Натисни "Новий Профіль"
+3. Введи назву сервера та основні налаштування
+4. Налаштуй Discord RPC (опціонально)
 
-## Current Date and Time
-This README was generated on 2026-02-10 15:49:02 UTC.
+### 2. Створення Біду
+1. Перейди в розділ "Біди"
+2. Натисни "Додати Біндинг"
+3. Обери клавішу та введи команду/макрос
+4. Збережи
+
+### 3. Макроси
+
+Підтримані макроси:
+- `{player}` - ім'я гравця
+- `{server}` - назва сервера
+- `{time}` - поточний час
+- `{custom:value}` - користувацькі змінні
+
+Приклад:
+```
+/me робить щось: {time} на {server}
+```
+
+## 🔗 Discord Rich Presence
+
+Налаштування в додатку:
+1. Перейди в "Налаштування" → "Discord"
+2. Введи Application ID
+3. Додай своєю текстуру/іконку
+4. Готово! RPC буде оновлюватися автоматично
+
+## 📝 Ліцензія
+
+MIT License - див. [LICENSE](LICENSE)
+
+## 🤝 Контрибʼютинг
+
+Ми вітаємо PR та issues! 
+
+## 👨‍💻 Автор
+
+Створено [Denys26-gif](https://github.com/Denys26-gif)
+
+---
+
+**Made with ❤️ for RP Community**
